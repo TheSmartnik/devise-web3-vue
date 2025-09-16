@@ -1,0 +1,27 @@
+{
+  "name": "devise-web3-vue",
+  "version": "1.0.0",
+  "description": "A vue button to login with metamask. Assumed to be used with devise-web3 ruby gem",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build-lib": "vite build --mode lib",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vue": "^3.5.21",
+    "web3": "4.16.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.4",
+    "@vue/tsconfig": "^0.8.1",
+    "rollup": "^4.50.2",
+    "typescript": "^5.9.2",
+    "vite": "^6.3.6",
+    "vue-tsc": "^3.0.7"
+  }
+}
