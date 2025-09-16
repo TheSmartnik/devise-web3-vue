@@ -9,14 +9,15 @@ export default defineConfig(({ mode }) => {
       build: {
         lib: {
           entry: resolve(__dirname, 'src/index.ts'),
-          name: 'WalletConnect',
-          fileName: (format) => `wallet-connect.${format}.js`
+          name: 'DeviseWeb3Vue',
+          fileName: (format) => `devise-web3-vue.${format === 'es' ? 'js' : 'umd.cjs'}`
         },
         rollupOptions: {
-          external: ['vue'],
+          external: ['vue', 'web3'],
           output: {
             globals: {
-              vue: 'Vue'
+              vue: 'Vue',
+              web3: 'Web3'
             }
           }
         }
