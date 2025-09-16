@@ -1,6 +1,6 @@
 {
   "name": "devise-web3-vue",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A vue button to login with metamask. Assumed to be used with devise-web3 ruby gem",
   "type": "module",
   "files": [
