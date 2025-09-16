@@ -5,7 +5,13 @@ import { resolve } from 'path'
 export default defineConfig(({ mode }) => {
   if (mode === 'lib') {
     return {
-      plugins: [vue()],
+      plugins: [
+        vue({
+          style: {
+            filename: 'style.css'
+          }
+        })
+      ],
       build: {
         lib: {
           entry: resolve(__dirname, 'src/index.ts'),
@@ -18,9 +24,16 @@ export default defineConfig(({ mode }) => {
             globals: {
               vue: 'Vue',
               web3: 'Web3'
+            },
+            assetFileNames: (assetInfo) => {
+              if (assetInfo.name && assetInfo.name.endsWith('.css')) {
+                return 'style.css'
+              }
+              return assetInfo.name || 'assets/[name].[ext]'
             }
           }
-        }
+        },
+        cssCodeSplit: false
       }
     }
   }
